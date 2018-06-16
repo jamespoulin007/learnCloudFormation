@@ -1,0 +1,39 @@
+{
+"AWSTemplateFormatVersion": "2018-06-15",
+    "Description": "Single Instance Deploy",
+    "Metadata": {
+
+    },
+    "Parameters": {
+    
+    },
+    "Mappings": {
+
+    },
+    "Conditions": {
+
+    },
+    "Resources": {
+
+        "Web1": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "KeyName": "virginia",
+                "ImageId": "ami-08111162" ,
+                "InstanceType": "t2.micro",
+                "Monitoring": false,
+                "SecurityGroupIds" : "mysg",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "Web1"
+                    }
+                ]
+            }
+        }
+        
+    },
+    "Outputs": {
+
+    }
+}
